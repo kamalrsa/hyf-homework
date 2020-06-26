@@ -14,9 +14,10 @@
 
  /*............... main grid with 6 rows and 5 columns ...........*/
 main{
-    width: 90%;
+    width: 100%;
     height: auto;
-    padding:50px;
+    margin:0;
+    padding:0;
     display: grid;
     grid-template-rows: 0.2fr 0.1fr 0.8fr 0.1fr 0.2fr 0.2fr;
     grid-template-columns: repeat(4, 1fr);
@@ -164,7 +165,7 @@ main{
 
 /*--------------media!...........................*/
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     main{
         grid-template-columns: 1fr;
         
@@ -188,10 +189,14 @@ main{
 
     .column_left{
              width: 100%;
+             margin:0;
+             padding-right: 5px;
     }
 
     .column_right{
                 width: 100%;
+                
+                padding-right:5px;
 
      }
     .gallery{
@@ -210,6 +215,8 @@ main{
     }
     .footer_column{
         width:100%;
+        margin:0;
+        padding:0;
     }
     
 
