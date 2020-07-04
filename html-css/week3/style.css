@@ -156,7 +156,7 @@ form select{
         display:flex;
         flex-direction: column;
         flex-shrink: 1;
-        flex-basis: 75%;
+        float:right;
         padding:20px;
         
                
