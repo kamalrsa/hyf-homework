@@ -152,7 +152,7 @@ form select{
   }
   
  
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
    nav ul {
     display: flex;
     flex-grow: 2;
@@ -161,6 +161,10 @@ form select{
     flex-basis: 75%;
 
 
+    }
+    .container{
+        margin: 0;
+        padding: 0;
     }
     .ship{
         width: 100%;
