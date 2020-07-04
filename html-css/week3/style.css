@@ -28,7 +28,7 @@ nav ul  {
 
 }
 nav ul li a{
-    padding:20px;
+    padding:10px;
     font-size: 20px;
     color:rgb(118, 182, 255)
 
@@ -153,8 +153,11 @@ form select{
  
   @media (max-width: 500px) {
     nav ul {
-        width: 100%;
-        display: block;
+        display:flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        flex-basis: 75%;
+        
                
     }
     a:hover { 
