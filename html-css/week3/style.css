@@ -153,11 +153,14 @@ form select{
   }
   
  
-  @media only screen and (max-width: 900px) {
+  @media (min-width: 500px) {
     nav ul {
         width: 100%;
         display: flex;
         flex-direction: column;
+        flex: 1;
+        padding: 0em;
+       
     }
     a:hover { 
         background-color: red;
