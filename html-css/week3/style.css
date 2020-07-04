@@ -1,6 +1,6 @@
 *{
     margin:0;
-    padding:0;
+
     box-sizing: border-box;
 }
 body{
@@ -97,9 +97,7 @@ form select{
       vertical-align: top;
       
   }
-  div{
-      display:block;
-  }
+  
   .submit{
       float:right;
       background-color: lightslategrey;
