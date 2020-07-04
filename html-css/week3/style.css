@@ -151,12 +151,7 @@ form select{
     clear: both;
     display: table;
   }
-  @media only screen and (max-width: 400px) {
-    .container {
-      margin: 0;
-      padding: 0;
-    }
-  }
+  
  
   @media only screen and (max-width: 600px) {
     nav ul {
@@ -167,8 +162,7 @@ form select{
     a:hover { 
         background-color: red;
         position: fixed;
-        width: 50px;
-        height: 30px;
+        
     }
         
  
