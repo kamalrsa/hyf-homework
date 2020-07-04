@@ -152,7 +152,8 @@ form select{
   }
   
  
-  @media (max-width: 800px) {
+  @media screen and (max-width: 44em) {
+      /*
    nav ul {
     display: flex;
     flex-grow: 2;
@@ -161,6 +162,10 @@ form select{
     flex-basis: 75%;
 
 
+    }*/
+    nav {
+        display: block;
+        width: 100%;
     }
     .container{
         margin: 0;
