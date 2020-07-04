@@ -1,5 +1,6 @@
 *{
     margin:0;
+    padding:0;
 
     box-sizing: border-box;
 }
@@ -151,12 +152,10 @@ form select{
   }
   
  
-  @media (max-width: 500px) {
+  @media (max-width: 400px) {
    nav ul {
-        display:flex;
-        flex-direction: column;
-        flex-shrink: 1;
-        padding:20px;
+        display:block;
+        width:100%;
         
                
     }
