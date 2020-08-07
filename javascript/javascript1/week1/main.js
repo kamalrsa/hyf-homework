@@ -11,8 +11,7 @@ let dogYearOfBirth = 2004;
 let dogYearFuture =  2024;
 let dogYear = dogYearFuture - dogYearOfBirth;
 let shouldShowResultInDogYears = true;
-if (shouldShowResultInDogYears = true)
-    {
+if (shouldShowResultInDogYears ===true){
         console.log(`your dog will became ${dogYear * 7} dog years old in ${dogYearFuture}`);
             }
             else {
@@ -28,10 +27,8 @@ let volumeInMeters = houseDeep * houseHeight * houseHeight;
 let gardenSizeInM2 = 100;
 const housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 let houseCost = 1000000;
-if (houseCost <= houseCost)
-{
+if (houseCost <= houseCost){
     console.log(`You can buy the house`);
-
 }
 else{
     console.log(`Don not buy the house`);
