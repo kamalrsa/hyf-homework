@@ -1,6 +1,6 @@
 function getFullname(firstname, surname, useFormalName){
     
-    let fullname = (useFormalName == true) ? ("Lord" + "  "+firstname +"  "+ surname) :(firstname +"  "+ surname);
+    const fullname = (useFormalName == true) ? ("Lord" + "  "+firstname +"  "+ surname) :(firstname +"  "+ surname);
 return fullname;
     
 
@@ -24,11 +24,11 @@ clothMatch(10); // execute in else condition
 
 //Event application
 
-let todayDate = new Date(); // displayed month, date, year and time
-let todayCount = todayDate.getDay(); // counts the number of todayDate
+const todayDate = new Date(); // displayed month, date, year and time
+const todayCount = todayDate.getDay(); // counts the number of todayDate
 function getEventWeekday(totalDays){
-let daysForEvent= todayCount + totalDays;
-let week = ["sday", "mday", "tuday", "wed", "Thday", "friday", "satday"];
+const daysForEvent= todayCount + totalDays;
+const week = ["sday", "mday", "tuday", "wed", "Thday", "friday", "satday"];
 
 if (daysForEvent >= 7){
     daysForEvent = daysForEvent % 7;
