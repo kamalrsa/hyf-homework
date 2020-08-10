@@ -1,13 +1,14 @@
 function getFullname(firstname, surname, useFormalName){
     
     let fullname = (useFormalName == true) ? ("Lord" + "  "+firstname +"  "+ surname) :(firstname +"  "+ surname);
-
-    console.log(fullname);
+return fullname;
+    
 
 }
-getFullname('kamal', 'sharma', true);
-getFullname('kamal', 'sharma', false);
-
+const fullname1= getFullname('kamal', 'sharma', true);
+const fullname2 = getFullname('kamal', 'sharma', false);
+console.log(fullname1);
+console.log(fullname2);
 // weather wear
 
 function  clothMatch(temperature){
