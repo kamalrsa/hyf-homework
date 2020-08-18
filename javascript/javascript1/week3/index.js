@@ -87,11 +87,7 @@ console.log(`In total that is${inTotal}% of my life`);
 //3.1 save a note
 const notes = [];
 function saveNote(content, id){
-    let note = {
-        content: content,
-        id: id
-    };
-    return notes.push(note);
+        notes.push({content, id,});
 }
 saveNote("Pickup groceries", 1);
 saveNote(" Do laundry", 2);
@@ -158,15 +154,21 @@ console.log(activities);
 
 function showStatus(){
     let sum = 0;
-    let count = 0;
-    activities.length = 3; // usage limit so user could not get more than 3 activities.
+    let maxLimit = 100;
+    //activities.length = 3; // usage limit so user could not get more than 3 activities.
     for(i=0; i<activities.length; i++){
-        sum= sum + activities[i].duration;
-        count ++;
+        sum+= activities[i].duration;
+        
     }
-    console.log(`You have added ${count} activities. The amount to ${sum} min of usage`);
+    console.log(`You have added ${activities.length} activities. The amount to ${sum} min of usage`);
+    if(sum > maxLimit){
+
     console.log(`You have reached your limit, no more smartphoning for you`);
     }
+    else{
+        console.log(`you can add more`);
+    }
+}
 showStatus();
 
 //Optional
@@ -181,21 +183,17 @@ function mostTimeSpent(){
         if(activities[i].duration > maxTimeSpent){
         maxTimeSpent = activities[i].duration;
         
-        
-        
-
     }
     
-//console.log(maxTimeSpent);
-console.log(activities[i].activity)
-    
-        
+
+console.log(maxTimeSpent);
 
     }
-    return maxTimeSpent;
-    
-    //console.log(maxTimeSpent);
+   return maxTimeSpent;
+
+
 }
+if
 mostTimeSpent();
 
 
