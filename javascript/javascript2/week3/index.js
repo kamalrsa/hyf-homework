@@ -1,4 +1,4 @@
-/*// Log out the text Called after 2.5 seconds 2.5 seconds after the script is loaded.
+// Log out the text Called after 2.5 seconds 2.5 seconds after the script is loaded.
     
         setTimeout(()=>{
             console.log("called after 2.5 sec");
@@ -54,7 +54,7 @@ function geoFindme() {
 }
 else {
     console.log("geolocation is not available");
-}}*/
+}}
 
 // Location on Map using Google maps api
 

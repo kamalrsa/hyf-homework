@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #map {
+            border: 2px solid green;
+            width : 80vw;
+            height: 80vh;
+        }
+        #map1 {
+            border: 2px solid green;
+            width : 80vw;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <button id = "button1">First Button</button>
+    <button id = "find-me">Log Location</button>
+    <p> latitude: <span id = "latitude"></span></p>
+    <p> latitude: <span id = "longitude"></span></p>
+    <!--<div id = "map1"></div> !-->
+    <div id = "map"></div>
+      
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2bKp48qD37UCVv-j1Mgyp2U6upY9eFIo&callback=initMap">
+      
+</script>
+<p ondblclick="myFunction()"> Display double click</p> 
+<p id = "doubleClick"></p>
+<script src = "index.js"></script>
+</body>
+</html>
