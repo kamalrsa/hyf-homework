@@ -1,4 +1,4 @@
-// Log out the text Called after 2.5 seconds 2.5 seconds after the script is loaded.
+/*// Log out the text Called after 2.5 seconds 2.5 seconds after the script is loaded.
     
         setTimeout(()=>{
             console.log("called after 2.5 sec");
@@ -105,4 +105,66 @@ function initMap(){
        }
     }
     jokeCreator(true, "funnyjoke", "logBadJoke");
-    jokeCreator(false, "funnyjoke", "badjoke");
+    jokeCreator(false, "funnyjoke", "badjoke"); */
+
+// Create an array with 3 items. All items should be functions. Iterate through the array and call all the functions.
+let array = [add(5,8), sub(3,4), mul(2,0)];
+//array.push(add);
+//array.push(sub);
+//array.push(mul);
+function sub(a,b){
+    let Y = a-b;
+    return Y;
+    }
+    
+
+function mul(a,b){
+    let x = a*b;
+    return x;
+    }
+
+for(let i = 0; i<array.length; i++){
+    console.log(array[i]);
+    
+}
+
+
+
+
+// Create a function as a const and try creating a function normally. Call both functions.
+const myFun = function show(){
+    console.log("Hack Your Future");
+}
+myFun();
+
+function show(){
+    console.log("Hack Your Future");
+} show();
+
+// Create an object that has a key whose value is a function. Try calling this function.
+
+let myObject = {
+    first: function(){
+        console.log("first function");
+    },
+    second: function(){
+        console.log("second function");
+    }
+};
+
+function add(a,b){
+    let sum = a+b;
+    return sum;
+    }
+let addNum = add(4, 5);
+//console.log(addNum);
+
+myObject.third = function add(){
+    console.log(addNum);
+};
+    
+
+
+for (let i in myObject){
+    myObject[i]();
+}
