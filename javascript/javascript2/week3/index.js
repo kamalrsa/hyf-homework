@@ -1,4 +1,4 @@
-/*// Log out the text Called after 2.5 seconds 2.5 seconds after the script is loaded.
+// Log out the text Called after 2.5 seconds 2.5 seconds after the script is loaded.
     
         setTimeout(()=>{
             console.log("called after 2.5 sec");
@@ -105,7 +105,7 @@ function initMap(){
        }
     }
     jokeCreator(true, "funnyjoke", "logBadJoke");
-    jokeCreator(false, "funnyjoke", "badjoke"); */
+    jokeCreator(false, "funnyjoke", "badjoke");
 
 // Create an array with 3 items. All items should be functions. Iterate through the array and call all the functions.
 let array = [add(5,8), sub(3,4), mul(2,0)];
