@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Weather Report</title>
+  </head>
+  <body>
+    <label for="city" style="font-weight: bold">Enter City</label>
+    <input type="text" id="cityname" name="cityname" /><br />
+    <button id="submit">Submit</button>
+    <section>
+      <h2 id="city"></h2>
+      <p id="temp"></p>
+      <div>
+        <p id="main"><img id="icon" /></p>
+      </div>
+      <p id="windspeed"></p>
+      <p id="cloudy"></p>
+      <p id="sunrise"></p>
+      <p id="location"></p>
+      <p id="status"></p>
+      <a id="map-link" target="_blank"></a>
+    </section>
+    <script src="weather.js"></script>
+  </body>
+</html>

@@ -31,7 +31,7 @@ const fetchApi = () => {
       windSpeed.innerText = `Windspeed ${data.wind.speed}`;
     });
 };
-button.addEventListener("click", (e) => {
+document.addEventListener("submit", (e) => {
   e.preventDefault();
   fetchApi();
 });
