@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="input">
+      <input type="text" id="inputValue" placeholder="Enter a city" />
+      <input type="submit" value="Submit" id="button" />
+      <!--<input type="submit" value="Position" id="button1" />!-->
+    </div>
+
+    <div class="display">
+      <h1 id="name"></h1>
+      <p id="desc"></p>
+
+      <img src="" alt="" id="weather-icon" />
+
+      <p id="temp"></p>
+      <p id="sunRise"></p>
+      <p id="sunSet"></p>
+      <p id="windSpeed"></p>
+    </div>
+
+    <div class="display">
+      <button id="button1">Position</button>
+      <p id="location"></p>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
