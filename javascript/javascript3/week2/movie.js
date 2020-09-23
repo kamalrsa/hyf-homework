@@ -13,13 +13,12 @@ function fetchMovie() {
 fetchMovie();
 
 function moviesList(data) {
-  sessionStorage.clear();
   console.log(data);
   let select = document.getElementById("movies").value;
   if (select == "badMovie") {
     data.filter((element) => {
       if (element.rating < 6) {
-        badMovies.push(element.title);
+        badMovies.push(element.title); // rating <6 called bad movies and push in the array movie title.
       }
     });
     console.log(badMovies);
@@ -34,8 +33,8 @@ function moviesList(data) {
       }
     });
 
-    console.log(badMovieBefore2000);
-    console.log(badMovieBefore2000.length);
+    console.log(badMovieBefore2000); // name of bad movies before 2000
+    console.log(badMovieBefore2000.length); // display no of bad movies before 2000
     document.getElementById(
       "badMoviesBefore2000"
     ).innerHTML = `no of movies${badMovieBefore2000.length}`;
