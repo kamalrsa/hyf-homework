@@ -1,33 +1,41 @@
-const promise1 = new Promise((resolve, reject) => {
-  resolve(
-    fetch(
-      "https://api.github.com/search/repositories?q=user:kamalrsa"
-    ).then((response) => response.json())
-    /*.then((data) => {
+function repoInformation(userName) {
+  const user = new Promise((resolve, reject) => {
+    resolve(
+      fetch(
+        `https://api.github.com/search/repositories?q=user:${userName}`
+      ).then((response) => response.json())
+      /*.then((data) => {
         console.log(data);
       })*/
-  );
-});
-const promise2 = new Promise((resolve, reject) => {
+    );
+  });
+  return user;
+}
+const promise1 = repoInformation("shruthidasarapu");
+const promise2 = repoInformation("kamalrsa");
+const promise3 = repoInformation("arya56");
+/*const promise2 = new Promise((resolve, reject) => {
   resolve(
     fetch(
       "https://api.github.com/search/repositories?q=user:arya56"
     ).then((response) => response.json())
-    /*.then((data) => {
+    .then((data) => {
         console.log(data);
-      })*/
+      })
   );
 });
+
 const promise3 = new Promise((resolve, reject) => {
   resolve(
     fetch(
       "https://api.github.com/search/repositories?q=user:shruthidasarapu"
     ).then((response) => response.json())
-    /*.then((data) => {
+    .then((data) => {
         console.log(data);
-      })*/
+      })
   );
-});
+});*/
+
 Promise.all([promise1, promise2, promise3]).then((data) => {
   console.log(data);
   renderRepo(data);
@@ -37,7 +45,8 @@ const reposOwner = document.querySelector("ul");
 function renderRepo(data) {
   data.forEach((e) => {
     const li = document.createElement("li");
-    li.innerHTML = `${e.items[0].owner.login} `;
+    li.innerHTML = `
+    ${e.items[0].owner.login} `;
     reposOwner.appendChild(li);
     e.items.forEach((element) => {
       const repos = document.createElement("ul");
