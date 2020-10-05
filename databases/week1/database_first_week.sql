@@ -93,7 +93,7 @@ select count(title) from task where due_date is NULL;
 
 
 -- Find the all task that are marked as done
-select * from task where status_id = 3;
+select * from task where status_id <> 3;
 
 -- find the tasks that are not marked as done
 select * from task where status_id = 1 OR status_id = 2;
@@ -115,9 +115,9 @@ select  task.title, status.name from status inner join task on status.id=task.st
 select count(task.id), name from  status join task on status.id=task.status_id group by status.name;
 
 -- get the name of all status, sorted by the status with most task first.
-select task.title, status.name from  status inner join task on status.id=task.status_id group by status.name order by task.due_date desc;
+select count(task.id), name from  task inner join status on status.id=task.status_id group by status.name order by task.id desc;
 
--- select * from task;
+
 
 
 
