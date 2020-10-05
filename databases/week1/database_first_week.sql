@@ -93,10 +93,10 @@ select count(title) from task where due_date is NULL;
 
 
 -- Find the all task that are marked as done
-select * from task where status_id <> 3;
+select * from task where status_id = 3;
 
 -- find the tasks that are not marked as done
-select * from task where status_id = 1 OR status_id = 2;
+select * from task where status_id <> 3;
 
 -- Get all the task, sorted with the most recently created first.alter.
 select *from task order by created desc;
