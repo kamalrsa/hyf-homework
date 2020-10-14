@@ -19,6 +19,7 @@ CREATE TABLE `services` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE `repairs` (
+  `repairs_no` int (10) NOT NULL,
   `license_no` varchar(50) NOT NULL,
   `service_no` int,
   `delivery_date` Date NOT NULL,
