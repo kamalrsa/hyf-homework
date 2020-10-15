@@ -15,6 +15,12 @@ for (let i = 0; i<names.length; i++){
 }
 console.log(names);
 
+// good way
+const names = ["peter", "ram", "shyam", "peter"];
+nameToRemove = "peter";
+const newNames = names.filter((item) => item != nameToRemove);
+console.log(newNames);
+
 //2: When will we be there
 
 const travelInformation = {
