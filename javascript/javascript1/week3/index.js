@@ -93,7 +93,12 @@ console.log(`In total that is${inTotal}% of my life`);
 //3.1 save a note
 const notes = [];
 function saveNote(content, id){
-        notes.push({content, id,});
+    
+     const note = {
+    content: content,
+    id: id,
+  };
+  notes.push(note);
 }
 saveNote("Pickup groceries", 1);
 saveNote(" Do laundry", 2);
