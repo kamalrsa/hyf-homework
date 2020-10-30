@@ -38,32 +38,14 @@ app.get("/cheap-meals", async (request, response) => {
 });
 
 // large-meals
-const largeMealArray = mealsArray.filter((mealitem) => {
-  if (mealitem.maxNumberOfGuests >= 5) {
-    mealitem.reviews = reviewsArray.filter(
-      (element) => mealitem.id === element.mealId
-    );
-    return mealitem;
-  } else {
-    return;
-  }
-});
+
 app.get("/large-meals", async (request, response) => {
-  response.send(largeMealArray);
+  response.send(mealsReviewsArray.filter(meal => meal.maxNumberOfGuests > 5));
 });
 
 //random meal
-const length = mealsArray.length;
-const randomNum = Math.floor(Math.random() * length);
-
-const randomMealArray = mealsArray.map((mealitem) => {
-  mealitem.reviews = reviewsArray.filter(
-    (element) => mealitem.id === element.mealId
-  );
-  return mealitem;
-});
 app.get("/meal", async (request, response) => {
-  response.send(randomMealArray[randomNum]);
+    response.send(mealsReviewsArray[Math.floor(Math.random() * mealsReviewsArray.length)]);
 });
 
 //reservation
@@ -73,9 +55,9 @@ app.get("/reservations", async (request, response) => {
 });
 
 //reservation random
-//const randomNumRes = Math.floor(Math.random() * reservationArray.length);
+const randomNumRes = Math.floor(Math.random() * reservationArray.length);
 app.get("/reservation", async (request, response) => {
-  response.send(reservationArray[randomNum]);
+  response.send(reservationArray[randomNumRes]);
 });
 
 module.exports = app;
