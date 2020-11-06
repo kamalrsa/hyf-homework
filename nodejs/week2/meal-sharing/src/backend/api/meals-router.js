@@ -5,12 +5,14 @@ const router = express.Router();
 const meals = require("./../data/meals.json");
 
 router.get("/", async (request, response) => {
+  //Get meals that match a title
   if (request.query.title) {
     const titleResult = meals.filter((item) =>
       item.title.toLowerCase().includes(request.query.title.toLowerCase())
     );
     response.send(titleResult);
   } else if (request.query.maxPrice) {
+    // Get meals tat has a price smaller than maxPrice
     if (!parseInt(request.query.maxPrice)) {
       return response
         .status(400)
@@ -22,6 +24,7 @@ router.get("/", async (request, response) => {
       response.send(price);
     }
   } else if (request.query.createdAfter) {
+    // Get meals that has been created after the date
     if (!parseInt(request.query.createdAfter)) {
       return response
         .status(400)
@@ -34,6 +37,7 @@ router.get("/", async (request, response) => {
       response.send(created);
     }
   } else if (request.query.limit) {
+    //meal parameter- only specific no of meals
     if (!parseInt(request.query.limit)) {
       return response
         .status(400)
@@ -49,6 +53,7 @@ router.get("/", async (request, response) => {
   }
 });
 
+//response with te json for the meal with corresponding id.
 router.get("/:id", async (request, response) => {
   const inputId = parseInt(request.params.id);
   if (!isNaN(inputId)) {
