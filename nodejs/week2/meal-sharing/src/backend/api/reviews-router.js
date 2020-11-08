@@ -9,7 +9,7 @@ router.get("/", async (request, response) => {
 router.get("/:id", async (request, response) => {
   let reviewsCount = Object.keys(reviews).length;
   if (parseInt(reviewsCount) < parseInt(request.params.id)) {
-    response.send("doesnot exists reservations");
+    response.send("does not exists reservations");
   } else if (!isNaN(parseInt(request.params.id))) {
     const reviewsWithId = reviews.filter(
       (item) => item.id == parseInt(request.params.id)
