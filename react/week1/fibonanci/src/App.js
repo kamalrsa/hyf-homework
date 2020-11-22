@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const [state, setState] = useState([1, 1]);
+  const [state, setState] = useState([0, 1]);
   const increment = () => {
     const x = state[state.length - 1];
     const y = state[state.length - 2];
