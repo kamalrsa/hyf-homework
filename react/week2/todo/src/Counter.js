@@ -5,6 +5,11 @@ const Counter = () => {
     setTimeout(() => setCounter(counter + 1), 1000);
   }, [counter]);
 
-  return <div>You have used{counter} seconds in this web page</div>;
+  return (
+    <div className="counter">
+      You have used<div className="watch"></div>
+      {counter} seconds in this web page
+    </div>
+  );
 };
 export default Counter;
