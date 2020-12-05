@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ListOfRecord from "./ListOfRecord";
 import Sub from "./Calculate";
+
 const Shift = () => {
   const [shift, setShift] = useState({
     eName: "",
@@ -47,6 +48,7 @@ const Shift = () => {
           <h1>Shift Overview</h1>
           <div>Submit Shift</div> <br></br>
           <div>
+            Name:{" "}
             <input
               type="text"
               placeholder="Enter name"
@@ -56,6 +58,7 @@ const Shift = () => {
             ></input>
             <br></br>
             <br></br>
+            Starting Time:{" "}
             <input
               type="time"
               name="sTime"
@@ -64,6 +67,7 @@ const Shift = () => {
             ></input>
             <br></br>
             <br></br>
+            Ending Time:{" "}
             <input
               type="time"
               name="eTime"
@@ -79,6 +83,7 @@ const Shift = () => {
             </h2>*/}
           </div>
           <div>
+            Search:{" "}
             <input
               type="search"
               placeholder="Search by Name"
